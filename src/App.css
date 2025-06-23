@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+.container {
+  margin: 0 auto;
+  background-color: #fff5d2;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.room {
+  width: 100%;
+  height: 100vh;
+}
+
+.room-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.decoration-top-image {
+  display: flex;
+  width: 100%;
+}
+.decoration-top-image > .flag-center {
+  width: 500px;
+}
+.decoration-top-image > .flag-left,
+.decoration-top-image > .flag-right {
+  width: 35%;
+  height: 80px;
+}
+.decoration-bottom {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.decoration-bottom-image-left {
+  padding-bottom: 30px;
+  padding-left: 10px;
+}
+
+.decoration-bottom-image-left > img {
+  width: 200px;
+}
+.decoration-bottom-image-left-gift {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+}
+
+.decoration-bottom-image-center > img {
+  width: 500px;
+}
+.decoration-bottom-image-right > img {
+  width: 200px;
+  /* position: absolute;
+  bottom: 0;
+  left: 30px;
+  width: 300px; */
+}
+
+.happy-birthday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.happy-birthday-imgs {
+  width: 50%;
+}
+
+.cake {
+  width: 250px;
+}
+
+.button-promise {
+  position: absolute;
+  bottom: 50px;
+}
+
+.glossy-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to bottom, #f5c6cb, #faa4ac);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glossy-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.glossy-button:hover {
+  background: linear-gradient(to bottom, #f5c6cb, #faa4ac);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.glossy-button:hover::before {
+  left: 125%;
+}
+
+.highlight-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.target {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.circle-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+}
+
+.handdrawn {
+  fill: none;
+  stroke: red;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2.5s ease-out forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.calendar,
+.card {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.card {
+  background-image: url("background-card.png");
+}
+.calender-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes zoomInTopLeft {
+  0% {
+    transform: scale(1);
+    transform-origin: right;
+    opacity: 1;
+  }
+
+  60% {
+    transform: scale(2);
+    transform-origin: right;
+    opacity: 1; /* Giữ nguyên */
+  }
+
+  100% {
+    transform: scale(2);
+    transform-origin: right;
+    opacity: 0; /* Bắt đầu mờ sau 1s */
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0; /* Bắt đầu mờ sau 1s */
+  }
+}
+
+.zoom-in {
+  animation: zoomInTopLeft 5s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+.zoom-target {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px;
+  animation: zoomInTopLeft 1s ease-in-out forwards;
+}
+.fade_out {
+  animation: fadeOut 1.5s ease-in-out forwards;
+  animation-delay: 4s;
+}
+
+.center-text {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("background.jpg");
+}
+
+.center-text h1 {
+  font-size: 3rem;
+  color: #333;
+  text-align: center;
+  font-family: "Style Script", cursive;
+}
+
+.center-box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to bottom, #f5c6cb, #faa4ac);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.control-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.message-box {
+  position: relative;
+}
+
+.message {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
